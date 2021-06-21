@@ -1,0 +1,516 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+	<!-- Vendor CSS Files -->
+	<link href="/acceuil/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/acceuil/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="/acceuil/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/acceuil/css/style.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="/images/favicon.ico" />
+{% endblock %}
+
+{% block body %}
+
+	<body>
+		
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="hero">
+			<div class="container text-center">
+			{% if app.user %}
+				<div class="row">
+					<div class="col-md-12">
+						<a class="hero-brand" href="{{ path('app_logout') }}" title="Home">
+						<img alt="" src="../images/logo2.png" alt="" width="100px" height="100px">
+						</a>
+					</div>
+				</div>
+			{% else %}
+				<div class="row">
+					<div class="col-md-12">
+						<a class="hero-brand" href="/login" title="Home">
+						<img class="logo" alt="" src="../images/logo2.png" alt="" width="100px" height="100px">
+						</a>
+					</div>
+				</div>
+			{% endif %}
+
+				<div class="col-md-12">
+					<h1>
+						Bienvenue sur Mon Portfolio 
+					</h1>
+
+					<p class="tagline">
+						Je suis développeur intégrateur web junior (en cours de formation au Pôle S de Poissy).
+					</p>
+					<a href="rachid-louzdi.pdf" class="btn btn-full " target="_blank"> VOIR-CV</a> 
+					
+			</div>
+
+		</section>
+		<!-- End Hero -->
+
+		<!-- ======= Header ======= -->
+		
+		<header id="header" class="d-flex align-items-center">
+		
+			<div class="container d-flex align-items-center">
+				<div id="logo" class="me-auto">
+					<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+					<!-- Uncomment below if you prefer to use a text image -->
+					<!--<h1><a href="#hero">Bell</a></h1>-->
+				</div>
+
+
+				<nav id="navbar" class="navbar order-last order-lg-0">
+				{% if app.user %}
+				<ul>
+						
+							<a href="/langages">langagesoffice</a>
+						
+						
+							<a href="/projets">Projetsoffice</a>
+						
+						
+							<a href="#presentation">Présentation</a>
+						
+						
+							<a href="#competence">Compétences</a>
+						
+						
+							<a href="#projet">Projets</a>
+						
+						
+							<a href="#github">GitHub</a>
+						
+						
+							<a href="#">Whire</a>
+						
+				{% else %}
+						
+							<a href="#presentation">Présentation</a>
+						
+						
+							<a href="#competence">Compétences</a>
+						
+						
+							<a href="#projet">Projets</a>
+						
+						
+							<a href="https://github.com/rachid840" target="_blank">GitHub</a>
+						
+							
+							<a href="https://www.whire.me/@rachid" target="_blank">Whire</a>
+							
+							
+							
+							<a href="#contact">Contact</a>
+						
+					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				</nav>
+				{% endif %}
+
+				<!-- .navbar -->
+
+				<div class="header-social-links d-flex align-items-center">
+					
+					
+				
+					<a href="#" class="linkedin">
+						<i class="bi bi-linkedin"></i>
+					</i>
+				</a>
+			</div>
+		</div>
+	</body>
+</header>
+<!-- End Header -->
+
+<main
+	id="main">
+
+	<!-- ======= About Section ======= -->
+	<section class="about" id="presentation">
+
+		<div class="container text-center">
+			<h2>
+				Présentation
+			</h2>
+
+			<p>
+				
+				
+				Bonjour,
+				Je m'appelle Rachid Louzdi. Je suis passionne par l'univers du web et dote d'une grande curiosite,
+        		je suis actuellement en fin de formation pour devenir développeur/intégrateur web junior, je me suis specialise dans le developpement front-back.
+       			A ce jour je recherche de nouvelles opportunités d'emploi dans la region des Yvelines.
+
+			</p>
+
+			<div class="row stats-row">
+				<div class="stats-col text-center col-md-3 col-sm-6">
+					<div class="circle">
+						<span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter stats-no"></span>
+						Maîtrisé la programmation web
+					</div>
+					<p>Avant tout, un bon intégrateur possède d’excellentes connaissances en programmation web,
+					 maîtrise sur le bout des doigts le langage HTML et CSS et possède au moins des connaissances de base dans un langage comme JavaScript, PHP, Symfony .
+				</div>
+
+				<div class="stats-col text-center col-md-3 col-sm-6">
+					<div class="circle">
+						<span data-purecounter-start="0" data-purecounter-end="79" data-purecounter-duration="1" class="purecounter stats-no"></span>
+						Curiosité
+					</div>
+					<p>Le développeur front-end doit maintenir ses connaissances à jour et suivre le rythme des évolutions technologiques. Curiosité et autonomie sont donc 2 qualités indispensables. 
+				</div>
+
+				<div class="stats-col text-center col-md-3 col-sm-6">
+					<div class="circle">
+						<span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter stats-no"></span>
+						Réactivité et organisation
+					</div>
+					<p>Respect des délais, organisation et autonomie sont des compétences indispensables à ce professionnel du web..
+				</div>
+
+				<div class="stats-col text-center col-md-3 col-sm-6">
+					<div class="circle">
+						<span data-purecounter-start="0" data-purecounter-end="68" data-purecounter-duration="1" class="purecounter stats-no"></span>
+						Sens du relationnel
+					</div>
+					<p>Les interactions avec les différents acteurs qui interviennent durant tout le processus de création sont nombreuses.
+					 Le développeur front-end doit être en capacité d’envisager les attentes des entreprises et de s’y adapter tout en optimisant le travail d’équipe.
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- End About Section -->
+
+	<!-- ======= Welcome Section ======= -->
+	<section class="welcome text-center">
+
+		<h2>Decouvres les differents languages de developpements </h2>
+			
+		
+
+	</section>
+	<!-- End Welcome Section -->
+
+	{# ******* COMPETENCES ******* #}
+
+	<section class="features" id="competence">
+			<h2 class="text-center">
+					Compétences
+				</h2>
+			<div class="container">
+				<div class="row">
+				{% for langage in langages %}
+					<div class="col-lg-3 col-sm-6 col-md-4 col-xs-12">
+
+						<div class="card card-block text-center">
+							<div>
+								<div >
+									<img class="competence-img" src="{{ asset('/images/'~ langage.logo) }}" alt="" width="50px" height="50px" style="margin-left: 2%;">
+								</div>
+							</div>
+
+							<div>
+								<h3>
+									{{ langage.titre }}
+								</h3>
+
+								<p>
+									{{ langage.experience }}
+								</p>
+							</div>
+						</div>						
+					</div>
+					{% endfor %}
+			</div>
+		</div>
+	</div>
+</div></section><!-- End Features Section -->{# ******* PROJETS ******* #}<section class="cta">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-9 col-sm-12 text-lg-start text-center">
+			<h2>
+				 Ma demande de poste.
+			</h2>
+
+			<p>
+				Je suis un développeur/Intégrateur web junior. Je suis passionné par les nouvelles technologies et
+				je connais bien l'environnement web et maîtrise les languages de développement (HTML, CSS, JS ...) ainsi que les bases de données. 
+				Souhaitant mettre ces compétences et mes qualités d’efficacité, de rigueur, de réactivité et de créativité au service de votre entreprise,
+				je vous adresse mon CV et mon Portfolio en pièce jointe. 
+				 
+			</p>
+			
+		</div>
+
+		
+	</div>
+</div></section><!-- End Call to Action Section --><section class="portfolio" id="projet">
+
+<div class="container text-center">
+	<h2>
+		Projets
+	</h2>
+
+	<p>
+		Les differents projet realisés lors de la formation devellopeur integrateur web (junior)
+	</p>
+</div>
+
+	<div class="portfolio-grid">
+		<div class="row">
+		{% for projet in projets %}
+			<div class="col-lg-3 col-sm-6 col-md-4 col-xs-12">
+">
+				<div class="card card-block">
+					<img<!--EndPortfolioSection-->{#*******CONTACT*******#}
+					<img src="{{ asset('/images/'~ projet.image) }}" alt="" width="250px" height="250px" style="text-align: center; margin: 10px; display: flex;">
+					
+					 <div class="portfolio-over"> <div>
+					  <h3 class="card-title"> {{projet.titre}} </h3> 
+					  <p class="card-text"> {{projet.description}} </p>
+					  </div> 
+				</div> 
+			</div> 
+		</div>
+		{% endfor %}
+	</div> 
+</div> 
+					  
+					  </section> </section> <!-- ======= Team Section ======= --> <section class="team" id="team">
+					 {# <div class="container"> <h2 class="text-center"> NOS ENCADRANT DU POLE S A POISSY 78300 </h2> <div class="row"> <div class="col-sm-3 col-xs-6"> <div class="card card-block"> <a href="#"><img alt="" class="team-img" src="/acceuil/img/team-1.jpg">
+						<div class="card-title-wrap">
+							<span class="card-title">alejandro</span>
+							<span class="card-text">ingenieur informatique</span>
+						</div>
+
+						<div class="team-over">
+							<h4 class="hidden-md-down">
+								Connect with me
+							</h4>
+
+							<nav class="social-nav">
+								<a href="#">
+									<i class="bi bi-twitter"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-facebook"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-linkedin"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-envelope-fill"></i>
+								</a>
+							</nav>
+
+							<p>
+								Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-sm-3 col-xs-6">
+				<div class="card card-block">
+					<a href="#"><img alt="" class="team-img" src="/acceuil/img/team-3.jpg">
+						<div class="card-title-wrap">
+							<span class="card-title">hugo</span>
+							<span class="card-text">mediateur fablab</span>
+						</div>
+
+						<div class="team-over">
+							<h4 class="hidden-md-down">
+								Connect with me
+							</h4>
+
+							<nav class="social-nav">
+								<a href="#">
+									<i class="bi bi-twitter"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-facebook"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-linkedin"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-envelope-fill"></i>
+								</a>
+							</nav>
+
+							<p>
+								Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-sm-3 col-xs-6">
+				<div class="card card-block">
+					<a href="#"><img alt="" class="team-img" src="/acceuil/img/team-3.jpg">
+						<div class="card-title-wrap">
+							<span class="card-title">Eric private</span>
+							<span class="card-text">encadrant</span>
+						</div>
+
+						<div class="team-over">
+							<h4 class="hidden-md-down">
+								Connect with me
+							</h4>
+
+							<nav class="social-nav">
+								<a href="#">
+									<i class="bi bi-twitter"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-facebook"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-linkedin"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-envelope-fill"></i>
+								</a>
+							</nav>
+
+							<p>
+								Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-sm-3 col-xs-6">
+				<div class="card card-block">
+					<a href="#"><img alt="" class="team-img" src="/acceuil/img/team-4.jpg">
+						<div class="card-title-wrap">
+							<span class="card-title">LE PÔLE S</span>
+							<span class="card-text">ASSOCIATION</span>
+						</div>
+
+						<div class="team-over">
+							<h4 class="hidden-md-down">
+								Connect with me
+							</h4>
+
+							<nav class="social-nav">
+								<a href="#">
+									<i class="bi bi-twitter"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-facebook"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-linkedin"></i>
+								</a>
+								<a href="#">
+									<i class="bi bi-envelope-fill"></i>
+								</a>
+							</nav>
+
+							<p>
+								Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+							</p>
+							
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> #}
+
+<!-- End Team Section -->
+<!-- ======= Contact Section ======= -->
+
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+<section
+	id="contact">
+	{# Pour afficher le message en cas de réussite #}
+	{% for flash_message in app.session.flashBag.get('success') %}
+		<div class="alert alert-warning" role="alert">
+			{{ flash_message }}
+		</div>
+	{% endfor %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2 class="section-title">CONTACTEZ-MOI</h2>
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-lg-3 col-md-4">
+				<div class="info">
+					<div>
+						<i class="bi bi-geo-alt"></i>
+						<p>Rachid<br>Louzdi</p>
+					</div>
+
+					<div>
+						<i class="bi bi-envelope"></i>
+						<p>rachid.louzdi@poles.com</p>
+					</div>
+
+					<div>
+						<i class="bi bi-phone"></i>
+						<p>+06.60.65.95.98</p>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="col-lg-5 col-md-8">
+				<div class="form">
+					<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+						<div class="form-group">
+							{{ form_row(form.name) }}
+						</div>
+						<div class="form-group mt-3">
+							{{ form_row(form.email) }}
+						</div>
+						<div class="form-group mt-3">
+							{{ form_row(form.content) }}
+						</div>
+						<div class="text-center">
+							<button type="submit">Send Message</button>
+						</div>
+						<div class="col-lg-5 col-md-8">
+						<a class="" href="#">
+							<i class="fas fa-chevron-up"></i></a>
+						</div>
+					</form>
+				</div>
+			</div>	
+			{{ form_end(form) }}
+				
+		</div>
+	</div>
+	
+</section>
+
+<!-- End Contact Section -->
+
+</main><!-- End #main -->
+<footer>
+&copy; <a href="MentionLegales.pdf">Mentions Légales</a> | Copyright 2021 © Rachid Louzdi <target="_blank">
+</footer>
+{% endblock %}
